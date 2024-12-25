@@ -1,35 +1,310 @@
-body * {
+@font-face {
+    font-family: "digital geometric";
+    src: local("Digital_geometric_bold"), url("./assets/fonts/Digital_geometric_bold.ttf") format("truetype");
+}
+
+body {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#navContainer{
-    background-color: #3b3b3b;
-    
-}
-
-#navbar{
-    justify-content: center;
-}
-
-#navitems{
-    display: flex;
-    flex-direction: row;
-    justify-self: center;
-    list-style-type: none;
-    align-items: center;
-}
-
-li a{
-    margin-top: 20px;
-    margin-right: 20px;
+    font-family: 'Courier New', Courier, monospace;
     color: whitesmoke;
+    background-color: #000;
 }
 
-#hero{
+#navContainer {
+    justify-self: right;
+    z-index: 20;
+    height: 100%;
+}
+
+#navbar {
+    position: fixed;
+    /* Add this */
+    right: 0;
+    /* Add this */
+    top: 50%;
+    /* Add this */
+    transform: translateY(-50%);
+    /* Add this */
+}
+
+#navitems {
+    list-style-type: none;
+}
+
+#navitems li {
+    margin: 20px 0;
+    /* Space between each item */
+    margin-right: 20px;
+}
+
+li a {
+    color: whitesmoke;
+    text-decoration: none;
+    /* Remove underline */
+    transition: color 0.3s ease;
+    /* Smooth transition for hover effect */
+
+}
+
+li a:hover {
+    color: #ffcc00;
+    /* Change color on hover */
+    /* text-decoration: underline; */
+    /* Alternatively, you can add a background color */
+    /* background-color: rgba(255, 204, 0, 0.2); */
+
+}
+
+#hero {
+    display: flex;
+    /* Add this */
+    align-items: center;
+    /* Add this */
+    justify-content: center;
+    /* Add this */
     width: 100%;
     height: 100vh;
-    /* background-image: url('https://images.unsplash.com/photo-1523204541423-4'); */
-    background-color: #3b3b3b;
+    /* background-image: url("./assets/images/bg-pf-tech-stack-1024x576.webp"); */
+    background-color: #000;
+    color: whitesmoke;
+
+}
+
+#nameContainer {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+#name {
+    /* margin-top: 5rem; */
+    font-size: 6em;
+    /* color: var(--blanco); */
+    overflow: hidden;
+    font-family: "digital geometric";
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+#name:nth-child(1) {
+    text-transform: capitalize;
+}
+
+#title {
+    /* position: relative; */
+    font-size: 2em;
+    /* color: var(--blanco); */
+    overflow: hidden;
+    font-family: "digital geometric";
+    /* font-weight: bold; */
+    /* letter-spacing: -7px; */
+}
+
+#footer {
+    justify-self: center;
+}
+
+
+/* ----------- Projects SS ----------------*/
+/* #projects {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    background-color: #1a1e23;
+}*/
+#projects {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #1a1e23;
+    padding: 20px;
+}
+
+.project-card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transform and shadow */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    /* Scale up on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+    /* Enhanced shadow on hover */
+}
+
+.card-content {
+    padding: 20px;
+    /* Padding for content */
+    z-index: 1;
+    /* Ensure content is above image */
+    position: relative;
+    /* Position relative for z-index */
+}
+
+.card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.project-card:hover .card-image {
+    opacity: 1;
+    z-index: 2;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+}
+
+.card-image iframe {
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    border: none;
+    /* Remove border */
+    filter: brightness(0.8);
+    /* Optional: Adjust brightness */
+}
+
+.project-card:hover .card-image {
+    opacity: 1;
+    /* Show image on hover */
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+#projects h3 {
+    color: #ffcc00;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#projects p {
+    color: whitesmoke;
+    line-height: 1.6;
+    font-size: 1em;
+}
+
+#projects a {
+    color: #ffcc00;
+    /* Link color */
+    text-decoration: none;
+    /* Remove underline */
+    display: block;
+    /* Block display for full width */
+    text-align: center;
+    /* Center align link */
+    margin-top: 10px;
+    /* Space above link */
+    transition: color 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+#projects a:hover {
+    color: #e6b800;
+    /* Darker shade on hover */
+}
+
+.project-card {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Darker background for better contrast */
+}
+
+
+/* Glitch */
+
+.glitch {
+    span {
+        &:not(:last-child) {
+            --ratio: calc(100% / var(--slice-count));
+            --top: calc(var(--ratio) * (var(--i) - 1));
+            --bottom: calc(var(--ratio) * (var(--slice-count) - var(--i)));
+
+            position: absolute;
+            white-space: nowrap;
+            clip-path: inset(var(--top) 0 var(--bottom) 0);
+            animation-duration: 0.3s;
+        }
+
+        &:nth-child(odd) {
+            animation-name: slide-from-left;
+        }
+
+        &:nth-child(even) {
+            animation-name: slide-from-right;
+        }
+
+        &:last-child {
+            opacity: 0;
+            animation: reveal steps(1) forwards;
+            animation-delay: 0.6s;
+        }
+    }
+}
+
+@keyframes slide-from-left {
+    from {
+        transform: translateX(-20%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-from-right {
+    from {
+        transform: translateX(20%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes reveal {
+    to {
+        opacity: 1;
+    }
 }
