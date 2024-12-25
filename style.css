@@ -1,0 +1,35 @@
+body * {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#navContainer{
+    background-color: #3b3b3b;
+    
+}
+
+#navbar{
+    justify-content: center;
+}
+
+#navitems{
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    list-style-type: none;
+    align-items: center;
+}
+
+li a{
+    margin-top: 20px;
+    margin-right: 20px;
+    color: whitesmoke;
+}
+
+#hero{
+    width: 100%;
+    height: 100vh;
+    /* background-image: url('https://images.unsplash.com/photo-1523204541423-4'); */
+    background-color: #3b3b3b;
+}
