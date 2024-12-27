@@ -116,13 +116,11 @@ li a:hover {
     background-color: #1a1e23;
 }*/
 #projects {
-    min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    background-color: #1a1e23;
     padding: 20px;
 }
 
@@ -251,6 +249,38 @@ li a:hover {
     /* Darker background for better contrast */
 }
 
+/* Section */
+.section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 50vh;
+}
+
+/* Containers */
+
+.title-container {
+    flex: 0 0 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-container {
+    flex: 0 0 70%;
+    display: flex;
+    justify-items: center;
+}
+
+/* About Section */
+#about {
+    background-color: #1a1e23;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #1a1e23;
+}
 
 /* Glitch */
 
