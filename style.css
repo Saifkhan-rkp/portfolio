@@ -255,6 +255,7 @@ li a:hover {
     flex-direction: row;
     justify-content: space-between;
     min-height: 50vh;
+    padding: 20px 0;
 }
 
 /* Containers */
@@ -269,12 +270,56 @@ li a:hover {
 .content-container {
     flex: 0 0 70%;
     display: flex;
-    justify-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 /* About Section */
 #about {
     background-color: #1a1e23;
+}
+
+.about-card {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+}
+
+.about-card h3 {
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+.about-card p {
+    color: whitesmoke;
+    line-height: 1.6;
+    font-size: 0.8em;
+    font-family: "digital geometric";
+
+}
+
+.about-card h4 {
+    color: #ffcc00;
+    margin-top: 20px;
+}
+
+.about-card ul {
+    color: whitesmoke;
+    line-height: 1.6;
+    font-size: 0.8em;
+    padding-left: 20px;
+    font-family: "digital geometric";
 }
 
 /* Contact Section */
