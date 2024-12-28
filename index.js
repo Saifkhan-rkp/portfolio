@@ -29,28 +29,61 @@
 //   type();
 // }
 
-
-
 /** Glitch Code */
-const random = (min, max) =>
-    min + Math.floor(Math.random() * (max - min + 1));
-  let glitchTexts = document.querySelectorAll(".glitch");
-  glitchTexts.forEach(text => {
-    let content = text.textContent;
-    text.textContent = "";
-    let slice = (text ).dataset.slice;
-    (text).style.setProperty("--slice-count", slice);
-    for (let i = 0; i <= Number(slice); i++) {
-      let span = document.createElement("span");
-      span.textContent = content;
-      span.style.setProperty("--i", `${i + 1}`);
-      if (i !== Number(slice)) {
-        span.style.animationDelay = `${random(100, 300)}ms`;
-      }
-      text.append(span);
+const random = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+let glitchTexts = document.querySelectorAll(".glitch");
+glitchTexts.forEach((text) => {
+  let content = text.textContent;
+  text.textContent = "";
+  let slice = text.dataset.slice;
+  text.style.setProperty("--slice-count", slice);
+  for (let i = 0; i <= Number(slice); i++) {
+    let span = document.createElement("span");
+    span.textContent = content;
+    span.style.setProperty("--i", `${i + 1}`);
+    if (i !== Number(slice)) {
+      span.style.animationDelay = `${random(100, 300)}ms`;
     }
-  });
-  
+    text.append(span);
+  }
+});
 
 // typeWord(nm, nameElement);
 // typeWord(title, titleElement);
+
+/** Slider Code */
+var swiper = new Swiper(".contacts-content", {
+  speed: 800,
+  slidesPerView: 1,
+  spaceBetween: 15,
+  autoplay: {
+    delay: 2000,
+  },
+  loop: true,
+  centerSlide: "true",
+  fade: "true",
+  grabCursor: "true",
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    320: {
+      slidesPerView: 2,
+    },
+    750: {
+      slidesPerView: 5,
+    },
+  },
+});
+
+swiper.init();
