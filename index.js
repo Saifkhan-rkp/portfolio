@@ -89,3 +89,40 @@ glitchTexts.forEach((text) => {
 
 // typeWord(nm, nameElement);
 // typeWord(title, titleElement);
+
+/** Slider Code */
+var swiper = new Swiper(".contacts-content", {
+  speed: 800,
+  slidesPerView: 1,
+  spaceBetween: 15,
+  autoplay: {
+    delay: 2000,
+  },
+  loop: true,
+  centerSlide: "true",
+  fade: "true",
+  grabCursor: "true",
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    320: {
+      slidesPerView: 2,
+    },
+    750: {
+      slidesPerView: 5,
+    },
+  },
+});
+
+swiper.init();
