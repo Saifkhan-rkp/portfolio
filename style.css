@@ -20,13 +20,9 @@ body {
 
 #navbar {
   position: fixed;
-  /* Add this */
   right: 0;
-  /* Add this */
   top: 50%;
-  /* Add this */
   transform: translateY(-50%);
-  /* Add this */
 }
 
 #navitems {
@@ -35,36 +31,30 @@ body {
 
 #navitems li {
   margin: 20px 0;
-  /* Space between each item */
   margin-right: 20px;
 }
 
 li a {
   color: whitesmoke;
   text-decoration: none;
-  /* Remove underline */
   transition: color 0.3s ease;
-  /* Smooth transition for hover effect */
 }
 
 li a:hover {
   color: #ffcc00;
-  /* Change color on hover */
-  /* text-decoration: underline; */
-  /* Alternatively, you can add a background color */
-  /* background-color: rgba(255, 204, 0, 0.2); */
+}
+
+.active {
+  color: #ffcc00; 
+  font-weight: bold; 
 }
 
 #hero {
   display: flex;
-  /* Add this */
   align-items: center;
-  /* Add this */
   justify-content: center;
-  /* Add this */
   width: 100%;
   height: 100vh;
-  /* background-image: url("./assets/images/bg-pf-tech-stack-1024x576.webp"); */
   background-color: #000;
   color: whitesmoke;
 }
@@ -76,9 +66,7 @@ li a:hover {
 }
 
 #name {
-  /* margin-top: 5rem; */
   font-size: 6em;
-  /* color: var(--blanco); */
   overflow: hidden;
   font-family: "digital geometric";
   font-weight: bold;
@@ -90,13 +78,9 @@ li a:hover {
 }
 
 #title {
-  /* position: relative; */
   font-size: 2em;
-  /* color: var(--blanco); */
   overflow: hidden;
   font-family: "digital geometric";
-  /* font-weight: bold; */
-  /* letter-spacing: -7px; */
 }
 
 #footer {
