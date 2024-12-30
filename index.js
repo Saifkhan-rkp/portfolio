@@ -126,3 +126,33 @@ var swiper = new Swiper(".contacts-content", {
 });
 
 swiper.init();
+
+/** Function to highlight the current navbar item based on scroll position */
+function highlightCurrentSection() {
+  const sections = document.querySelectorAll('.section');
+  const navLinks = document.querySelectorAll('#navitems li a');
+
+  window.addEventListener('scroll', () => {
+      let current = '';
+
+      // Loop through sections to find the current section
+      sections.forEach(section => {
+          const sectionTop = section.offsetTop; 
+          const sectionHeight = section.clientHeight;
+
+          if (scrollY >= sectionTop - sectionHeight / 3) {
+              current = section.getAttribute('id'); 
+          }
+      });
+
+      navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${current}`) {
+              link.classList.add('active');
+          }
+      });
+  });
+}
+
+// Call the function to activate the scroll detection
+highlightCurrentSection();
