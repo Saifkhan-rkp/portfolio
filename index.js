@@ -40,7 +40,7 @@ function startTypingOnView() {
   });
 
   observer.observe(paraElement); // Start observing the element
-  observer.observe(expElement); // Start observing the element
+  // observer.observe(expElement); // Start observing the element
 }
 
 // Usage for the About section
